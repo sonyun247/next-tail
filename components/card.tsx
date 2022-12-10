@@ -1,7 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Card({ data }) {
+interface ICard {
+  data: {
+    title: string;
+    image: string;
+    url: string;
+    description: string;
+  };
+}
+export default function Card({ data }: ICard) {
   return (
     <article className="p-7 flex flex-col items-center">
       <header className="pb-2 text-3xl font-semibold dark:text-blue-400 tracking-wider">

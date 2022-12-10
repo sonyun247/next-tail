@@ -2,6 +2,15 @@
 import Card from "./card";
 import { useEffect, useState } from "react";
 
+interface ICards {
+  project: {
+    title: string;
+    image: string;
+    url: string;
+    description: string;
+  };
+}
+
 export default function Cards() {
   const [cards, setCards] = useState([]);
   async function getCards() {
@@ -15,8 +24,8 @@ export default function Cards() {
 
   return (
     <>
-      {cards.map((project) => (
-        <Card data={project} />
+      {cards.map(({ project }: ICards) => (
+        <Card key={project.title} data={project} />
       ))}
     </>
   );

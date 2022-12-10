@@ -1,7 +1,4 @@
-import type { NextPage } from "next";
-import Link from "next/link";
-
-const Home: NextPage = () => {
+const Home = () => {
   return (
     <article className="flex flex-col justify-center items-center mt-28  text-center">
       <h1 className="text-6xl first-line pb-16">만나서 반갑습니다!</h1>
